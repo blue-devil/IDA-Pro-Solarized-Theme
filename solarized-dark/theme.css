@@ -1,36 +1,40 @@
 /*
-   ______________________________________________________________________
-  |  ______ __          ,.'   __.'.__  .   ______               ___      |
-  | |      |  |         /b`  '-.   .-'  d\|      ;             |   |     |
-  | |   __ |  |        .5h     /.'.\    =5|   _   \            |   |     |
-  | |.  1 \|  |        (0=h    '   '    =C)   1\   \        .--:.  |     |
-  | |   1_/|  |        ?3==,          .==7|   | \   \       |__|   |     |
-  | |.     | .-- -.-----{=`==oo____oo==`=}|   |  |.----.-- -.--:.  |     |
-  | |.  __ | |  V |  ^__|'"o58888888888,; |.  |  ||  ^_|  V |  |.  |     |
-  | |:  1 \|_|____|_____| `?88P^\,?88^\P  |.  | / |____|\___|__|:  |___  |
-  | |:  1_/   /            C8?\__d88\_/'  |:  1/   / .         |:  1   | |
-  | |::.. .  /             `8o8888/\88P   |::.. . /            |::.. . | |
-  | `-------'               '7oo88oo8P    `------'             `-------' |
-  |                     Cooo##~\/\/\/~====>              www.sctzine.com |
-  | Özgürlük ikinci el düşüncelerle olmaz.          gitlab.com/bluedevil |
-  |______________________________________________________________________|
+   _______________________________________________________________________
+  |  ______ __          ,.'   __.'.__  .   ______               ___       |
+  | |      |  |         /b`  '-.   .-'  d\|      ;             |   |      |
+  | |   __ |  |        .5h     /.'.\    =5|   _   \            |   |      |
+  | |.  1 \|  |        (0=h    '   '    =C)   1\   \        .--:.  |      |
+  | |   1_/|  |        ?3==,          .==7|   | \   \       |__|   |      |
+  | |.     | .-- -.-----{=`==oo____oo==`=}|   |  |.----.-- -.--:.  |      |
+  | |.  __ | |  V |  ^__|'"o58888888888,; |.  |  ||  ^_|  V |  |.  |      |
+  | |:  1 \|_|____|_____| `?88P^\,?88^\P  |.  | / |____|\___|__|:  |___   |
+  | |:  1_/   /            C8?\__d88\_/'  |:  1/   / .         |:  1   |  |
+  | |::.. .  /             `8o8888/\88P   |::.. . /            |::.. . |  |
+  | `-------'               '7oo88oo8P    `------'             `-------'  |
+  |                     Cooo##~\/\/\/~====>        github.com/blue-devil  |
+  |                                                 gitlab.com/bluedevil  |
+  | Freedom doesn't come from second-hand thoughts.      www.sctzine.com  |
+  |_______________________________________________________________________|
+  | @author   : Blue DeviL <bluedevil.SCT@gmail.com>                      |
+  | @tester   : ErrorInside <errorinside@sctzine.com>                     |
+  | @IDE      : Vi iMproved                                               |
+  | @template : Blue DeviL                                                |
+  | @date     : 14/08/2020                                                |
+  | @license  : AGPLv3                                                    |
+  |_______________________________________________________________________|
+  |                                                                       |
+  |                [SCT] Solarized Dark Theme for IDA Pro                 |
+  \_______________________________________________________________________/
 
-  [SCT] Solarized Dark Theme for IDA Pro 7.3+
-
-   ______________________________________________________________________ 
-  | @author   : Blue DeviL <bluedevil@sctzine.com>                       |
-  | @tester   : ErrorInside <errorinside@sctzine.com>                    |
-  | @IDE      : Vi iMproved <https://www.vim.org/>                       |
-  | @template : Blue DeviL                                               |
-  | @date     : 14/08/2022                                               |
-  | @license  : MIT                                                      |
-  |______________________________________________________________________|
-
-  This theme is based on the 'idaskins-dark' theme found
-  at <https://github.com/zyantific/IDASkins.git>
+    This theme is based on the 'idaskins-dark' theme found
+    at <https://github.com/zyantific/IDASkins.git>
   
-  Colours are based on the Solarized colour scheme 
-  by Ethan Schoonover: https://github.com/altercation/solarized
+    Colours are based on the Solarized colour scheme 
+    by Ethan Schoonover: https://github.com/altercation/solarized
+    
+    28/11/2024: FIX: Output window color fixed for macOS and Linux
+                FIX: Checkbox border color fixed for Linux
+                ADD: IDAPython and IDC Script color added
 */
 
 @importtheme "_base";
@@ -43,7 +47,7 @@ QWidget
 
 QCheckBox
 {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #073642;
 }
 
 QTextEdit,
@@ -302,9 +306,8 @@ IDADockWidget > QWidget > QAbstractButton
     border-radius: 3px;
 }
 
-QRadioButton,
-QLabel,
-QCheckBox
+/*QRadioButton,*/
+QLabel
 {
     background: transparent;
 }
@@ -564,4 +567,18 @@ TChooser
 {
     qproperty-highlight-bg-default: red;
     qproperty-highlight-bg-selected: pink;
+}
+
+text_area_t
+{
+    qproperty-keyword1-fg: #6C71C4;
+    qproperty-keyword2-fg: #D33682;
+    qproperty-keyword3-fg: #DC323F;
+    qproperty-string-fg: #859900;
+    qproperty-comment-fg: #586E75;
+    qproperty-preprocessor-fg: #268BD2;
+    qproperty-number-fg: #CB4B16;
+    qproperty-user1-fg: #1D6EA3;
+    qproperty-user2-fg: #586E75;
+    qproperty-user3-fg: #A12965;
 }
